@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "web2x-mcp": {
+      "command": "node",
+      "args": ["~/web2x-mcp/build/index.js"],
+      "env": {
+        "API_KEY": "YOUR_WEB2X_API_KEY"
+      }
+    }
+  }
+}
+  
