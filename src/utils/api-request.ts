@@ -9,12 +9,16 @@ export async function requestApi(url: string, method: string, payload?:Record<st
       }
       const baseUrl = 'https://api.web2x.io'
       const fetchUrl = `${baseUrl}${url}${query}`
+      const headers = <Record<string,string>>{
+        'Api-Key': apiKey,
+        'Content-Type': 'application/json',
+      }
+      if(payload && payload['referrer_token']){
+        headers['Referrer-Token'] = payload['referrer_token']
+      }
       const response = await fetch(fetchUrl, {
-        method: method,
-        headers: {
-          'Api-Key': apiKey,
-          'Content-Type': 'application/json',
-        },
+        method,
+        headers,
         ...(method === 'POST' ? { body: JSON.stringify(payload) } : {})
       });
   
