@@ -1,11 +1,11 @@
-const wallet = {
+export const wallet = {
     "/api/v1/wallet/challenge":{
         POST: {
             description: "wallet challenge 생성할 수 있게 parameter 입력 요청",
             params :{
                 auth_type: {
                     type: 'string',
-                    description: '지갑 인증방식',
+                    description: '지갑 인증방식(eoakey/passkey)',
                     required: true
                 },
                 callback_url: {
@@ -145,16 +145,3 @@ const wallet = {
         }
     }
 }
-
-
-export const apiInfo = {
-    "wallet": wallet
-}
-
-// function extractApiList(info: Record<string,any>): Array<string>{
-//     return Object.keys(info)
-// }
-
-// export const apiList = {
-//     wallet: extractApiList(wallet)
-// }

@@ -4,7 +4,7 @@ import {requestApi} from '../utils/api-request.js'
 import {z} from 'zod';
 import { zodToJsonSchema } from 'zod-to-json-schema';
 
-import {apiInfo} from '../commons/apiInfo.js'
+import {apiInfo} from '../commons/api-info/index.js'
 
 const schema = z.object({});
 
