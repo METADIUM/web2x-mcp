@@ -1,4 +1,24 @@
 {
+  "name": "web2x-mcp",
+  "version": "1.0.0",
+  "description": "MCP Server for web2x functionality",
+  "type": "module",
+  "main": "build/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node build/index.js",
+    "dev": "tsc --watch",
+    "clean": "rm -rf build",
+    "rebuild": "npm run clean && npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "mcp",
+    "server",
+    "model-context-protocol"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.9.0",
     "dotenv": "^16.5.0",
@@ -7,8 +27,15 @@
     "zod": "^3.24.3",
     "zod-to-json-schema": "^3.24.5"
   },
-  "type": "module",
   "devDependencies": {
-    "@types/node": "^22.14.1"
-  }
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "files": [
+    "build/**/*",
+    "README.md"
+  ]
 }
