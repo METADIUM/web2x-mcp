@@ -17,7 +17,7 @@
     "server",
     "model-context-protocol"
   ],
-  "author": "Your Name",
+  "author": "Wise Cho",
   "license": "MIT",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.9.0",
